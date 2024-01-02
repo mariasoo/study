@@ -12,7 +12,7 @@ public class FinallyTest_1 {
         try {
             number1 = input.nextInt();
             number2 = input.nextInt();
-            FinallyTest_1 test = new FinallyTest_1();
+         //   FinallyTest_1 test = new FinallyTest_1();
             int checkn = FinallyTest_1.returnFinally(number1, number2);
             System.out.println(checkn);
         } catch (Exception e) {
@@ -34,7 +34,7 @@ public class FinallyTest_1 {
         }
         finally {
             System.out.println("finally 구문");
-            return 2;
+            return 200;
         }
         //return 3;
     }

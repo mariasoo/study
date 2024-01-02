@@ -2,17 +2,18 @@ package Loop2;
 
 import java.util.Scanner;
 
-public class Loop131_Test2 {
+public class Loop139_Test10 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+
         int num1 = scan.nextInt();
         int num2 = scan.nextInt();
 
-        int min = Math.min(num1,num2);
-        int max = Math.max(num1,num2);
-
-        for(int i = min; i<=max; i++){
-            System.out.print(i + " ");
+        for(int i = 1; i<=9; i++){
+            for(int j = num1; j<= num2; j++){
+                System.out.printf("%d * %d =  %3d   ",j,i,j*i);
+            }
+            System.out.println();
         }
     }
 }

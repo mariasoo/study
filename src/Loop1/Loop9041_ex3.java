@@ -15,10 +15,9 @@ public class Loop9041_ex3 {
                     System.out.println("축하합니다. 합격입니다.");
                 } else if(score>0 && score < 80) {
                     System.out.println("죄송합니다. 불합격입니다");
-                }
-
             }
 
         }
 
     }
+}

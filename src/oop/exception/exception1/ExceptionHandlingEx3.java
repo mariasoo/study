@@ -3,15 +3,13 @@ package oop.exception.exception1;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Scanner;
 
-public class ExceptionTest1 {
+public class ExceptionHandlingEx3 {
 
     public static void main(String[] args) {
         System.out.println("프로그램 시작");
         FileInput();
         System.out.println("프로그램 종료");
-
     }
 
     public static void FileInput() {

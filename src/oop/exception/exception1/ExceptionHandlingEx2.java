@@ -2,7 +2,7 @@ package oop.exception.exception1;
 
 import java.util.Scanner;
 
-public class ExceptionTest {
+public class ExceptionHandlingEx2 {
     static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {

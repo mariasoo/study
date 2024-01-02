@@ -10,6 +10,14 @@ public class Loop128_Test4 {
         while(true){
             int num = scan.nextInt();
 
+            if(num == 0){
+                break;
+            }
+
+            if(num % 3 !=0 && num % 5 !=0){
+                numCount++;
+            }
         }
+        System.out.println(numCount);
     }
 }
