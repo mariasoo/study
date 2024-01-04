@@ -1,26 +1,19 @@
 package collection.list;
 
+import lombok.Setter;
+
 public class Student {
 
     private String stuno;
 
     private String name;
 
+    @Setter
     private int kor;
 
-    public void setKor(int kor) {
-        this.kor = kor;
-    }
-
-    public void setEng(int eng) {
-        this.eng = eng;
-    }
-
-    public void setMath(int math) {
-        this.math = math;
-    }
-
+    @Setter
     private int eng;
+    @Setter
     private int math;
 
     public String getStuno() {
@@ -37,7 +30,7 @@ public class Student {
 
     public Student(String stuno, String name) {
         this.stuno = stuno;
-        this.name = name;
+        this.name = name; //VO 클래스에서 생성자 정의를 해줌.
     }
 
     public int getEng() {
