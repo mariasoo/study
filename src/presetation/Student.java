@@ -1,4 +1,4 @@
-package assignment;
+package presetation;
 
 public class Student implements Comparable<Student> {
     String name; //이름
@@ -15,8 +15,6 @@ public class Student implements Comparable<Student> {
 
     @Override
     public int compareTo(Student o) {
-        return Integer.compare(id,o.id);
+        return this.id - o.id; //오름차순 정렬
     }
-    //return Comparator.comparingDouble((Student stuTmp) -> stuTmp.score).reversed() //반대로 출력
-    //        .thenComparingInt(stuTmp -> - stuTmp.id).compare(o2,o1);
 }

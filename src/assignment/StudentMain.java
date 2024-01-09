@@ -22,10 +22,12 @@ public class StudentMain{
                         .thenComparingInt(stu -> stu.id).compare(o1,o2);
             }
         });
+        //아래 식이랑 같음 limit!!!
+        Arrays.stream(student).limit(2).forEach(studentTmp -> System.out.println(studentTmp.toString()));
 
         System.out.println("--------------------------");
         for (int i = 0; i < 2; i++) {
-            System.out.println(student[i]);
+            System.out.println(student[i].toString());
         }
     }
 

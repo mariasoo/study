@@ -1,14 +1,12 @@
-package collection.list.ex;
+package Generic.wildcard;
 
-public class Board { //VO(value object)
+public class Board implements Comparable{ //VO(value object)
 
     private String subject;
 
     private String content;
 
     private String writer;
-
-    public Board(){}
 
     public Board(String subject, String content, String writer) {
         this.subject = subject;
@@ -38,5 +36,17 @@ public class Board { //VO(value object)
 
     public void setWriter(String writer) {
         this.writer = writer;
+    }
+
+    @Override
+    public String toString() {
+        return
+                content + " "
+                ;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return - this.content.compareTo(o.toString());
     }
 }

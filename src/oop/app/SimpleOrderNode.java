@@ -18,9 +18,9 @@ public class SimpleOrderNode {
         new SampleNumber(11,23,33),
         new SampleNumber(10,24,34));
 
-        sampleNumbers.stream().forEach(number -> System.out.println(number.toString()));
+        sampleNumbers.forEach(number -> System.out.println(number.toString()));
         System.out.println("------------");
         Collections.sort(sampleNumbers);
-        sampleNumbers.stream().forEach(number -> System.out.println(number.toString()));
+        sampleNumbers.forEach(number -> System.out.println(number.toString()));
     }
 }

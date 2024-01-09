@@ -1,6 +1,5 @@
 package collection.list.ex;
 
-import java.net.Inet4Address;
 import java.util.ArrayList;
 import java.util.List;
 

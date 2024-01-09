@@ -5,5 +5,4 @@ public class BoardMain {
         BoardDao boardDao = new BoardDao();
         boardDao.list();
     }
-
 }

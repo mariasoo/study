@@ -1,5 +1,6 @@
 package collection.list.set;
 
+import java.util.Collections;
 import java.util.TreeSet;
 
 public class ComparableMember {
@@ -13,8 +14,12 @@ public class ComparableMember {
         members.add(new Member("김소영",21));
         members.add(new Member("박소영",25));
 
+        System.out.println(members.size());
+
         for (Member member : members) {
             System.out.println(member.name + " "+ member.age);
+
         }
+
     }
 }

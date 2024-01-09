@@ -2,6 +2,8 @@ package collection.list.ex;
 //vector는 Arraylist와 동일한 내부 구조를 가지고 있다.
 //vector는 동기화된 메소드로 구성되어 있어 멀티스레드가 동시에 vector()메소드를 실행할 수 없다.
 
+import Generic.wildcard.Board;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;

@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class BoardDao {
     Scanner sc = new Scanner(System.in);
+    public static int bno=1;
     List<Board> boards = new ArrayList<>(); //Board게시판! boards게시물!(테이블)
 
     public void list(){
@@ -15,9 +16,10 @@ public class BoardDao {
         System.out.println("------------------------------------------");
         System.out.printf("%-10s %-15s %-20s %-40s\n","no","writer","date","title");
         System.out.println("------------------------------------------");
-        System.out.printf("%-10s %-15s %-20s %-40s\n","1","winter","2024.01.02","게시판에 오신 것을 환영합니다.");
-        System.out.printf("%-10s %-15s %-20s %-40s\n","2","winter","2024.01.01","올 겨울은 많이 춥습니다.");
+//        System.out.printf("%-10s %-15s %-20s %-40s\n","1","winter","2024.01.02","게시판에 오신 것을 환영합니다.");
+//        System.out.printf("%-10s %-15s %-20s %-40s\n","2","winter","2024.01.01","올 겨울은 많이 춥습니다.");
 
+        readAll();
         mainMenu();
     }
 
@@ -41,6 +43,8 @@ public class BoardDao {
     public void create(){
         System.out.println("[새 게시물 입력]");
         Board board = new Board();
+        board.setBno(bno);
+        bno++;
         System.out.print("제목: ");
         board.setBtitle(sc.nextLine());
         System.out.print("내용: ");
@@ -77,7 +81,7 @@ public class BoardDao {
         }
 
         System.out.println("---------------------------");
-        System.out.print("보조 메뉴: 1. Update | 2.Delete | 3. List");
+        System.out.println("보조 메뉴: 1. Update | 2.Delete | 3. List");
         System.out.print("메뉴 선택: ");
         String tmp = sc.nextLine();
         switch (tmp){
@@ -87,12 +91,17 @@ public class BoardDao {
         }
         list();
     }
+    public void readAll(){
+        for (Board board : boards) {
+            System.out.printf("%-10s %-15s %-20s %-40s\n",board.getBno(),board.getBwriter(),board.getBdate(),board.getBtitle());
+        }
+    }
 
     public void clear(){
         System.out.println("[게시물 전체 삭제]");
         System.out.println("------------------");
         System.out.println("보조 메뉴: 1.Ok | 2.Cancel");
-        System.out.println("메뉴 선택: ");
+        System.out.print("메뉴 선택: ");
         String tmp = sc.nextLine();
         if(tmp.equals("1")){
             boards.removeAll(boards);
